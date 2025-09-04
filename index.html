@@ -260,6 +260,18 @@
                 document.getElementById('location-info').innerHTML = "An error occurred while retrieving location.";
             }
         }
+        <audio id="bgMusic" autoplay loop>
+    <source src="https://files.catbox.moe/i18a0a.mp3" type="audio/mpeg">
+  </audio>
+  <div style="position:fixed;bottom:20px;right:20px;">
+    <button onclick="toggleMusic()" class="btn"><i class="fa-solid fa-music"></i> Musik</button>
+  </div>
+
+  <script>
+    let music = document.getElementById("bgMusic");
+    function toggleMusic(){
+      if(music.paused){music.play();}else{music.pause();}
+        }
     </script>
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
